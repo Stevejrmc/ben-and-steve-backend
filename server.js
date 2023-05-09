@@ -24,12 +24,12 @@ app.use("/contacts", contactsRouter);
 
 
 // Run to seed local db
-app.get("/seed", (req, res) => {
-  Posts.create(PostsSeed).then(posts => {
-    res.redirect("/posts");
-  })
-    .catch(err => console.log(err));
-})
+// app.get("/seed", (req, res) => {
+//   Posts.create(PostsSeed).then(posts => {
+//     res.redirect("/posts");
+//   })
+//     .catch(err => console.log(err));
+// })
 
 app.get("/", (req, res) => {
   res.redirect("/posts");
